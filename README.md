@@ -1,53 +1,93 @@
-Project description
-Jarvis OS
-Jarvis OS is a voice assistant designed to streamline and automate anything from your daily tasks to hardcore developing and everything in between. It integrates offline speech recognition, AI-powered natural language responses, and system-level command execution. Additional customization can be done by using LM studio alongside Jarvis on your own machine. Jarvis can also be used as a voice-powered CLI, accesing, organizing, and manipulating files as well as running simple bash commands.
+# Jarvis OS
 
-Features
-Offline speech recognition with Vosk
-Natural voice synthesis using Yapper TTS
-Streaming from Local or Online LLM models
-Default: Gemini 1.5 Flash
-Local Default: Llama 3.2 1B parameters [Run LM Studio server and change URL for LLM calls in main.py to customize or change model]
-Implemented RAG system for queries that may require or benefit from web searches
-Terminal-based interface with dynamic boot and loading screens
-Executes system commands: open applications, perform searches, file management, shut down, and more
-Example commands:
-"Jarvis open vscode"
+Available on PyPI: [https://pypi.org/project/jarvis-os/](https://pypi.org/project/jarvis-os/)
 
-"Jarvis google how to bake sourdough"
+Jarvis OS is a voice assistant designed to streamline and automate anything from daily tasks to advanced development workflows. It integrates offline speech recognition, AI-powered natural language responses, and system-level command execution. It can also function as a voice-powered command-line interface, capable of organizing, accessing, and manipulating files, as well as executing bash commands. Jarvis supports optional local customization through LM Studio.
 
-"Jarvis shutdown"
+---
 
-"Jarvis explain quantum entanglement"
+## Features
 
-"Jarvis delete the read me file"
+* Offline speech recognition with Vosk
+* Natural voice synthesis using Yapper TTS
+* Streaming responses from local or online LLMs
 
-Reccomended before Install
-It is best to run inside a python virtual enviornment:
+  * Online default: Gemini 1.5 Flash
+  * Local default: LLaMA 3.2 (1B parameters) via LM Studio
+  * Customize the local model by editing the LLM endpoint URL in `main.py`
+* Retrieval-Augmented Generation (RAG) system for web-enhanced queries
+* Terminal-based interface with boot animations and dynamic loading screens
+* System-level command execution, such as:
 
+  * Opening applications
+  * Performing web searches
+  * Managing files
+  * Shutting down system
+
+### Example Commands
+
+```text
+Jarvis open vscode
+Jarvis google how to bake sourdough
+Jarvis shutdown
+Jarvis explain quantum entanglement
+Jarvis delete the read me file
+```
+
+---
+
+## Recommended Setup Before Installation
+
+It is recommended to install and run Jarvis OS inside a Python virtual environment:
+
+```bash
 python -m venv jarvis-env
-Windows:
+```
 
-jarvis-env\Scripts\activate
-POSIX (Max/Linux):
+### Activate Environment
 
-source jarvis-env/bin/activate
--- )
+* **Windows**
 
-Installation
+  ```bash
+  jarvis-env\Scripts\activate
+  ```
+* **Mac/Linux (POSIX)**
+
+  ```bash
+  source jarvis-env/bin/activate
+  ```
+
+---
+
+## Installation
+
+```bash
 pip install jarvis-os
-Configuration
-Python version 3.8 or higher is required
+```
 
-Ensure microphone input is enabled on your system
+---
 
-To use an AI backend (like LM Studio), modify the API endpoint in main.py
+## Configuration
 
-Additional Notes
-This package was initially built for Windows software. Support for POSIX is in progress (so some features work and others may not).
+* Python version 3.8 or higher is required
+* Ensure microphone input is enabled on your system
+* To connect to an LLM backend (e.g., LM Studio), modify the API endpoint in `main.py`
 
-License
-This project is licensed under the Apache License 2.0.
+---
 
-Author
-Arvin Adeli
+## Additional Notes
+
+* This package was initially built for Windows systems
+* POSIX (Linux/Mac) support is partial and in progress
+
+---
+
+## License
+
+This project is licensed under the Apache License 2.0. See the `LICENSE` file for details.
+
+---
+
+## Author
+
+**Arvin Adeli**
